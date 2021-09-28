@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Dispatch } from "redux";
 import { actionCreators } from "../state"
 
 interface IState {
   input: {
     name: string;
     age: number;
-    note: string;
     url: string;
+    note: string;
   };
 }
 
@@ -21,20 +22,20 @@ interface IProps {
 }
 
 const AddToList = ({ people }: IProps) => {
-  const dispatch = useDispatch();
+  const dispatch: Dispatch<any> = useDispatch();
 
   const initialState = {
     name: "",
     age: 0,
-    note: "",
     url: "",
+    note: "",
   };
 
   const [input, setInput] = useState<IState["input"]>({
     name: "",
     age: 0,
-    note: "",
     url: "",
+    note: "",
   });
 
   const handleChange = (

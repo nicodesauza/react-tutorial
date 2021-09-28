@@ -6,7 +6,7 @@ interface IState {
     age: number;
     url: string;
     note?: string;
-  }[];
+  };
 }
 
 interface Test {

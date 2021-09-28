@@ -1,3 +1,7 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { State } from "../state";
+
 interface IProps {
   people: {
     name: string;
@@ -8,8 +12,14 @@ interface IProps {
 }
 
 const List = ({ people }: IProps) => {
+  const peoples: IProps  = useSelector((state: State) => state.people);
+
+  useEffect(() => {
+    
+  },[])
+
   const renderedList = (): JSX.Element[] => {
-    return people.map((person, index) => {
+    return peoples.people?.map((person, index) => {
       return (
         <li key={index} className="List">
           <div className="List-header">

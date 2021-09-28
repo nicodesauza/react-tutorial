@@ -8,7 +8,7 @@ interface IState {
       age: number;
       url: string;
       note?: string;
-    }[];
+    };
   }
 
 export const test = (amount: number) => {

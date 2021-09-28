@@ -34,7 +34,9 @@ const peopleReducer = (
   switch (action.type) {
     case ActionType.SET_PEOPLE: {
       const people = action.payload;
-      return { ...state, people };
+      state.people.push(people)
+      
+      return state;
     }
     default:
       return state;
